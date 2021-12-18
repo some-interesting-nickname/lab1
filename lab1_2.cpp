@@ -7,14 +7,14 @@ int div(unsigned int r, int deg_m, unsigned int l2, unsigned int g){
 	
 	unsigned int tmp = l2;
 	unsigned int tmp_r = 0;
-	for(int i = 0; i < 10; i++){
+	/*for(int i = 0; i < 10; i++){
 		if(tmp & 1 != 0)
 			tmp_r = i;
 		tmp = tmp >> 1;
 	}
 	if(tmp_r < (r * 2)){
 		return l2 >> r;
-	}
+	}*/
 	unsigned int mask = 1;
 	for(int i = r; i >= 0; i--){
 		if((l2 & (mask << (i + deg_m))) != 0) {
